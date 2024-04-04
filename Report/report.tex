@@ -83,4 +83,19 @@ In this method we assume that variational family factorizes,$Q(z) = \prod_{i=1}^
 
 \subsection{Coordinate Ascent/Descent}
 This is the technique we used in EM algorithm. In E-step all paramters($\psi$) were fixed and in M-step, all $Q_i's$ were fixed and we optimised the parameters. This is called as Coordinate Ascent/Descent. In Variational Autoencoders we use gradient descent approach.
+
+\section{Variational Autoencoders}
+\subsection{Setting up the problem}
+We have input data $x^{(i)}$, latent variables $z^{(i)}$ are continuous random variables, each $z^{(i)} \sim N(0,I_{k \times k})$, $x^{(i)} | z^{(i)} \sim N(g(z^{(i)};\theta),\sigma^2 I_{d \times d})$. Here $g(z^{(i)};\theta)$ is some neural network(generally decoder model) with parameters $\theta$. We will us variational inference to approximate the posteiror distribution $p(z^{(i)}|x^{(i)})$. For this we will choose our variational family as \boxed{Q_i = N(q(x^{(i)};\phi), diag(v(x^{(i)};\psi)^2))}.
+
+Here $q(x^{(i)};\phi)$ is a neural network with parameters $\phi$ which generates the mean and $v(x^{(i)};\psi)$ is a neural network with parameters $\psi$ which generates the variance of the distribution. We will now derive the ELBO for this model.Since we have choosen our variational family as Normal distribution, this is also called Ammortized Inference.
+
+Further if we notice that our covariance matrix of variational family Q is diagonal, which mean all the latent variables are independent, that means indirectly we are making mean field assumption. Now we can write the ELBO as follows:
+
+\boxed{ELBO(\theta,\phi,\psi) = \sum_{i=1}^{n} \mathbb{E}_{z^{(i)} \sim Q_i} [log(\frac{p(x^{(i)},z^{(i)};\theta)}{Q_i(z^{(i)})})]} where $Q_i = N(q(x^{(i)};\phi), diag(v(x^{(i)};\psi)^2))$. Now we need to maximise this ELBO with respect to $\theta,\phi,\psi$. Here are the updates for the parameters:\\
+1. $\theta = \theta + \eta \nabla_{\theta} ELBO(\theta,\phi,\psi)$\\
+2. $\phi = \phi + \eta \nabla_{\phi} ELBO(\theta,\phi,\psi)$\\
+3. $\psi = \psi + \eta \nabla_{\psi} ELBO(\theta,\phi,\psi)$
+
+\subsection{Calculating Gradient with respect to $\theta$}
 \end{document}

@@ -1879,9 +1879,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stix2-type1/t1-stix2text-bold.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stix2-type1/t1-stix2text-italic.tfm
 INPUT report.aux
 INPUT report.run.xml
 OUTPUT report.run.xml
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathbb.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathsf.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathex.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathit.enc
