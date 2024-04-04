@@ -1882,6 +1882,7 @@ INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT report.aux
 INPUT report.run.xml
 OUTPUT report.run.xml
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathsf.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathex.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathit.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc

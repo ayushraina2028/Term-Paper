@@ -70,8 +70,17 @@ E-Step: For all $i$, set \boxed{Q_i(z^{(i)}) = p(z^{(i)}|x^{(i)}; \psi)}
 
 M-step: \boxed{\psi^{(new)}$ = $argmax_{\psi} \sum_{i=1}^{m} ELBO(x^{(i)};Q_i,\psi)} where ELBO is the evidence lower bound.
 
-The problem with this is in E-step where we assumed that posterior distribution can be computed. Suppose $z \sim N(0,I_{k \times k})$ and $x | z \sim NeuralNetwork(z^{(i)};\theta)$. Now it is almost impossible to calculate the posterior distribution $p(z^{(i)}|x^{(i)}; \psi)$. Now only option left is to approximate the posterior distribution. One way to do this is to use MCMC EM Algorithm, but that requires knowledge of markov chains, instead we will be using Variational Inference.
+The problem with this is in E-step where we assumed that posterior distribution can be computed. Suppose $z \sim N(0,I_{k \times k})$ and $x | z \sim NeuralNetwork(z^{(i)};\theta)$. Now it is almost impossible to calculate the posterior distribution $p(z^{(i)}|x^{(i)}; \psi)$. 
 
+\section{Approximating the distribution}
+There are many methods to approximate the posterior distribution. One of the methods we are going to discuss is Variational Inference.
 \subsection{Variational Inference}
 
+This is used to approximate the complex distributions. We know that \boxed{log(P(x)) = ELBO(x;Q) + D_{KL}(Q||P_{z|x})} where $P_{z|x}$ is the posterior distribution of z given x. We want Q to be as close as possible to $P_{z|x}$, which means $D_{KL}(Q||P_{z|x}) \longrightarrow 0$. If we maximise ELBO with respect to Q, then we are minimising $D_{KL}(Q||P_{z|x})$(because LHS is constant) and minimising the KL Divergence means Q is close to $P_{z|x}$. Hence we can say \boxed{P_{z|x} \sim argmax_{q \sim Q} ELBO(x;q)}, where we will assume all $q's$ are in the same family of distributions($Q$) called as variational family. These are distributions over vectors of dimension $k$.
+
+\subsection{Mean Field Variational Inference}
+In this method we assume that variational family factorizes,$Q(z) = \prod_{i=1}^{k} q_i(z^{(i)})$, which means each latent variable $z^{(i)}$ is independent.
+
+\subsection{Coordinate Ascent/Descent}
+This is the technique we used in EM algorithm. In E-step all paramters($\psi$) were fixed and in M-step, all $Q_i's$ were fixed and we optimised the parameters. This is called as Coordinate Ascent/Descent. In Variational Autoencoders we use gradient descent approach.
 \end{document}
