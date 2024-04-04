@@ -44,8 +44,7 @@
     Autoencoders are deep generative models. They are widely used for tasks such as image generation, data compression, denoising and capturing the most important features of the data. Autoencoders contains encoder and decoder networks. Variational Autoencoders introduce probabilistic modelling into encoding process in which we learn the latent distribution, which enables generation of data which are similar to training data.
 \end{abstract}
 
-\section{Introduction}
-We will begin with some basic concepts which will be used in later parts of the report. 
+\section{Introduction} 
 \subsection{Neural Networks}
 Given a training set $\{(x^{(i)}, y^{(i)})\}_{i=1}^{m}$, where $x^{(i)}$ is the input and $y^{(i)}$ is the output. Neural networks are used to learn a function $h_{\theta}(x)$ which maps input $x$ to output $y$. The function $h_{\theta}(x)$ is parameterized by $\theta$ which are the weights of the neural network. The neural network is trained by minimizing the loss function $J(\theta)$ by using optimization algorithms like gradient descent. In our case we will not have any output $y^{(i)}$ for the input $x^{(i)}$. We need to learn the latent representation of the input data $x^{(i)}$.
 
@@ -61,6 +60,18 @@ In this case we are dealing with images and we want our output image to be as si
 
 \boxed{min \;\; \sum_{i=1}^{m} ||\;  x^{(i)} - Decoder_{\theta}(Encoder_{\phi}(x^{(i)})) \; ||^2}
 
-To minimise this loss function we use backpropagation algorithm.
+To minimise this loss function we use backpropagation algorithm. We will now discuss some methods which we will use in further sections.
+
+\section{Expectation Maximization Algorithm}
+\subsection{Normal EM Algorithm}
+In one line we can say EM algorithm is used to perform maximum likelihood estimation in the presence of latent variables. Suppose $\psi$ are the parameters we want to learn and $z^{(i)}$ are the latent variables. Then we perform these two steps iteratively until convergence:
+
+E-Step: For all $i$, set \boxed{Q_i(z^{(i)}) = p(z^{(i)}|x^{(i)}; \psi)}
+
+M-step: \boxed{\psi^{(new)}$ = $argmax_{\psi} \sum_{i=1}^{m} ELBO(x^{(i)};Q_i,\psi)} where ELBO is the evidence lower bound.
+
+The problem with this is in E-step where we assumed that posterior distribution can be computed. Suppose $z \sim N(0,I_{k \times k})$ and $x | z \sim NeuralNetwork(z^{(i)};\theta)$. Now it is almost impossible to calculate the posterior distribution $p(z^{(i)}|x^{(i)}; \psi)$. Now only option left is to approximate the posterior distribution. One way to do this is to use MCMC EM Algorithm, but that requires knowledge of markov chains, instead we will be using Variational Inference.
+
+\subsection{Variational Inference}
 
 \end{document}
