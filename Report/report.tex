@@ -98,4 +98,8 @@ Further if we notice that our covariance matrix of variational family Q is diago
 3. $\psi = \psi + \eta \nabla_{\psi} ELBO(\theta,\phi,\psi)$
 
 \subsection{Calculating Gradient with respect to $\theta$}
+Let us calculate $\nabla_{\theta} ELBO(\theta,\phi,\psi)$. This can be written as: $\nabla_{\theta} ELBO(\theta,\phi,\psi) = \sum_{i=1}^{n} \nabla_{\theta} \mathbb{E}_{z^{(i)} \sim Q_i} [log(\frac{p(x^{(i)},z^{(i)};\theta)}{Q_i(z^{(i)})})]$. Since $Q_i$ does not depend on $\theta$, we will have $\nabla_{\theta} Q_i(z^{(i)}) = 0$ and we can take the gradient inside the expectation, so we get $\sum_{i=1}^{n} \mathbb{E}_{z^{(i)} \sim Q_i} [\nabla_{\theta} log(p(x^{(i)}, z^{(i)};\theta))]$ 
+
+\subsection{Calculating Gradient with respect to $\phi$}
+Since the sampling distribution $Q_i$ depends on $\phi$, we cannot swap the expectation and gradient. So we need to use the \textcolor{blue}{Reparametrization Trick}. We know that if $x \sim N(\mu,\sigma^2)$ is equivalent to $x = \mu + \sigma\xi$, where $\xi \sim N(0,1)$. Hence we can say $z^{(i)} \sim N(q(x^{(i)};\phi), diag(v(x^{(i)};\psi)^2))$  is equivalent to say \boxed{z^{(i)} = q(x^{(i)};\phi) + diag(v(x^{(i)};\psi))\xi^{(i)}}, where $\xi^{(i)} \sim N(0,I_{k \times k})$. With this reparametrization we now have converted  $\mathbb{E}_{z^{(i)} \sim Q_i}[log(\frac{p(x^{(i)},z^{(i)};\theta)}{Q_i(z^{(i)})})]$ to \boxed{\mathbb{E}_{\xi^{(i)} \sim N(0,I_{k \times k})}[log(\frac{p(x^{(i)},q(x^{(i)};\phi) + diag(v(x^{(i)};\psi))\xi^{(i)};\theta)}{Q_i(q(x^{(i)};\phi) + diag(v(x^{(i)};\psi))\xi^{(i)})})]}. Now we can take the gradient inside the expectation and we can calculate the gradient with respect to $\phi$.
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  4 APR 2024 17:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  5 APR 2024 05:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1610,6 +1610,38 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 100.
 
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 103.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\phi' on input line 103.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 103.
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 104--105
+\T1/stix2/m/n/10 (+20) Since the sam-pling dis-tri-bu-tion $\LS1/stix2/m/it/10 Q[]$ \T1/stix2/m/n/10 (+20) de-pends on $\LS1/stix2/m/it/10 ^^^$\T1/stix2/m/n/10 (+20) , we
+ []
+
+
+Underfull \hbox (badness 5091) in paragraph at lines 104--105
+\T1/stix2/m/n/10 (+20) equiv-a-lent to say [],
+ []
+
+
+Underfull \hbox (badness 3428) in paragraph at lines 104--105
+\T1/stix2/m/n/10 (+20) where $\LS1/stix2/m/it/10 ^^X[] \LS1/stix2/m/n/10 í \LS1/stix2/m/it/10 N\LS1/stix2/m/n/10 .0\LS1/stix2/m/it/10 ; I[]\LS1/stix2/m/n/10 /$\T1/stix2/m/n/10 (+20) . With this reparametriza-
+ []
+
+
+Overfull \hbox (11.11401pt too wide) in paragraph at lines 104--105
+[]\T1/stix2/m/n/10 (-20) .
+ []
+
+
 AED: lastpage setting LastPage
 [2
 
@@ -1619,18 +1651,18 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 63827 strings out of 478287
- 1373846 string characters out of 5849289
- 2423930 words of memory out of 5000000
- 81097 multiletter control sequences out of 15000+600000
+ 63829 strings out of 478287
+ 1373866 string characters out of 5849289
+ 2423929 words of memory out of 5000000
+ 81098 multiletter control sequences out of 15000+600000
  576100 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  135i,11n,140p,1127b,1755s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathbb.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathsf.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/stix2-type1/STIX2Math.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-BoldItalic.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb>
-Output written on report.pdf (2 pages, 792411 bytes).
+Output written on report.pdf (2 pages, 795300 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
- 18 named destinations out of 1000 (max. 500000)
- 22661 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 134 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
+ 19 named destinations out of 1000 (max. 500000)
+ 22669 words of extra memory for PDF output out of 24883 (max. 10000000)
 
