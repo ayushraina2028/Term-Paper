@@ -40,15 +40,14 @@
 
 
 \begin{abstract}
-  Autoencoders are deep generative models. They are widely used for tasks such as image generation, data compression, denoising and capturing the most important features of the data. Autoencoders contains encoder and decoder networks. Variational Autoencoders introduce probabilistic modelling into encoding process in which we learn the latent distribution, which enables generation of data which are similar to training data.
+  Autoencoders are deep \textbf{generative} models. They are widely used for tasks such as image generation, data compression, denoising and capturing the most important features of the data. Autoencoders contains encoder and decoder networks. Variational Autoencoders introduce \textbf{probabilistic modelling} into encoding process in which we learn the latent distribution, which enables generation of data which are similar to training data.
 \end{abstract}
 
 
 \section{Introduction}
-A basic knowledge of neural networks is required to understand the further concepts which are convered in this paper.
 
 \subsection{Autoencoder}
-This is a neural network which consists of two parts: Encoder($\phi$),Decoder($\theta$) (where $\phi, \theta$ are the parameters)and bottleneck layer whose dimension is much less than input layer. Encoder network learns the latent representation of the input data and decoder network learns to reconstruct the input data from the latent representation. The loss function is defined as the difference between input and output data.
+This is a neural network which consists of two parts: \textbf{Encoder($\phi$)},\textbf{Decoder($\theta$)} (where $\phi, \theta$ are the parameters)and bottleneck layer between these two,whose dimension is much less than input layer. Encoder network learns the latent representation of the input data and decoder network learns to reconstruct the input data from the latent representation. The loss function is defined as the pixelwise difference between input and output data.
 
 \subsection{Aim}
 We want output of the network as input itself. The main challenge is that input has to pass from a bottleneck layer whose dimension is much less than input layer. We can say that the network learns to compress the data to hidden state.
@@ -61,20 +60,17 @@ In this case we are dealing with images and we want our output image to be as si
   min \;\; \sum_{i=1}^{m} ||\;  x^{(i)} - Decoder_{\theta}(Encoder_{\phi}(x^{(i)})) \; ||^2
 \]
 
-\section{Expectation Maximization (EM) Algorithm}
+\section{Theorems and Results}
+\subsection{Expectation Maximization(EM) Algorithm}
 EM algorithm is used to perform the maximum likelihood estimation in the presence of latent variables. This is a two step process consisting of E-step and M-step. Suppose $\psi$ are the parameters we want to learn and $z^{(i)}$ are the latent variables. Then we perform these two steps iteratively until convergence: \\
-E-step: For all $i$, set $Q_i(z^{(i)}) = p(z^{(i)}|x^{(i)}; \psi)$, M-step: $\psi^{(new)}$ = $argmax_{\psi} \sum_{i=1}^{m} ELBO(x^{(i)};Q_i,\psi)$, where ELBO is called evidence lower bound. The problem in this algorithm is that in E-step, we assumed that the posterior distribution $p(z^{(i)}|x^{(i)}; \psi)$  can be calculated, but sometimes it may be extremely complex to calculate this distribution, for example suppose $z \sim N(0,I_{k \times k})$ and $x | z \sim NeuralNetwork(z^{(i)};\theta)$, then it is almost impossible to calculate the posterior distribution $p(z^{(i)}|x^{(i)}; \psi)$ because of the complexity of the neural network.
-\\ So we need to find a way to approximate this distribution. There are many ways to approximate this distribution, like Gibbs sampling, Variational Inference, etc. In this paper we will discuss about the variational inference.
+E-step: For all $i$, set $Q_i(z^{(i)}) = p(z^{(i)}|x^{(i)}; \psi)$, M-step: $\psi^{(new)}$ = $argmax_{\psi} \sum_{i=1}^{m} ELBO(x^{(i)};Q_i,\psi)$, where \textbf{ELBO} is called evidence lower bound. We cannot use EM algorithm here because in E-step, we assumed that the posterior distribution $p(z^{(i)}|x^{(i)}; \psi)$  can be calculated, but sometimes it may be extremely complex to calculate this distribution, for example suppose $z \sim N(0,I_{k \times k})$ and $x | z \sim NeuralNetwork(z^{(i)};\theta)$, then it is almost impossible to calculate the posterior distribution $p(z^{(i)}|x^{(i)}; \psi)$ because of the complexity of the neural network.
+\\ So we need to find a way to approximate this distribution. There are many ways to approximate this distribution, like \textbf{Gibbs sampling, Variational Inference}, etc. In this paper we will discuss about the variational inference.
 
-\section{Variational Inference}
-We know that $log(P(x)) = ELBO(x;Q) + D_{KL}(Q || P_{z|x})$, where $ELBO(x;Q) = E_{z \sim Q} [log(\frac{log(P(x,z)}{Q(x)}]$ and $D_{KL}(Q || P_{z|x})$ is the KL Divergence between the $Q$ and the true posterior distribution $P_{z|x}$. We want $Q$ to be as close as possible to the true posterior distribution $P_{z|x}$, which mean $D_{KL}(Q || P_{z|x}) \longrightarrow 0$. So if we maximise the ELBO with respect to $Q$, then we are minimising the KL Divergence between $Q$ and $P_{z|x}$, because the $log(P(x))$ is constant. So we can say that $P_{z|x} \sim argmax_{q \sim Q} ELBO(x;q)$, where we will assume all $q's$ are in the same family of distributions($Q$) called as variational family. These are distributions over vectors of dimension $k$. In our case we will also assume that $Q$ is a family of Gaussian distributions.
+\subsection{Variational Inference}
+We know that $log(P(x)) = ELBO(x;Q) + D_{KL}(Q || P_{z|x})$, where $ELBO(x;Q) = E_{z \sim Q} [log(\frac{log(P(x,z)}{Q(x)}]$ and $D_{KL}(Q || P_{z|x})$ is the \textbf{KL Divergence} between the $Q$ and the true posterior distribution $P_{z|x}$. We want $Q$ to be as close as possible to the true posterior distribution $P_{z|x}$, which mean $D_{KL}(Q || P_{z|x}) \longrightarrow 0$. So if we maximise the ELBO with respect to $Q$, then we are minimising the KL Divergence between $Q$ and $P_{z|x}$, because the $log(P(x))$ is constant. So we can say that $P_{z|x} \sim argmax_{q \sim Q} ELBO(x;q)$, where we will assume all $q's$ are in the same family of distributions($Q$) called as \textbf{Variational family}. These are distributions over vectors of dimension $k$. In our case we will also assume that $Q$ is a family of Gaussian distributions.
 
-\subsection{Mean Field Variational Inference}
-Sometime for the ease of computation we assume that variational family $Q$ factorizes, so that $Q(z) = \prod_{i=1}^{k} q_i(z^{(i)})$, which means each latent variable $z^{(i)}$ is independent. This assumption is called mean field assumption and the method is called mean field variational inference. 
-
-\section{Autoencoders again}
 \subsection{Generation with Autoencoders}
-Till now we have seen that autoencoders take input and maps it to hidden representation(latent representation) and decoder reconstructs the input back from the hidden representation. After the training, we can remove the encoder part and feed random latent representation to the decoder to generate output. But we may not get meaningful outputs because latent representations lies in very small subspace of the input space.\\
+Till now we have seen that autoencoders take input and maps it to \textbf{hidden} representation(latent representation) and decoder reconstructs the input back from the hidden representation. After the training, we can remove the encoder part and feed random latent representation to the decoder to generate output. But we may not get meaningful outputs because latent representations lies in very small \textbf{subspace} of the input space.\\
 To generate meaningful outputs we need to feed the latent variables which is similar to the training data. In other words we want latent variables to be sampled from $P(z|X)$.But autoencoders learn hidden representation $z$ but not a distribution $P(z|X)$. Same is in the case of decoder every time we feed the same latent representation we get the same output, which means both encoder and decoder are deterministic in this case. Now we will look over \textcolor{red}{Variational Autoencoders} which have same structure but they learn the distribution over the latent variables.
 
 \section{Variational Autoencoders}
@@ -88,5 +84,82 @@ We are interested in $P(z|X)$ which corresponds to learning hidden representatio
 \end{figure}
 
 \section{Experimental Results and Conclusions}
+\subsection*{Reconstructions on MNIST and Animal Face dataset} Here are the reconstructed outputs of autoencoder on 5 randomly choosen images. In first case we have used only \textbf{dense} layers and in second,third case we have used \textbf{convolutional} layers.Animal faces are reconstructed in Grayscale.
+
+% add autoencoder1.png and autoencoder2.png in 1 row with border in images
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{autoencoder1.png}
+    \includegraphics[width=0.3\textwidth]{autoencoder2.png}
+    \includegraphics[width=0.3\textwidth]{animalFaceAE1.png}
+    \caption{Reconstructions of Autoencoder without and with CNN}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection*{Experimental Results on Animal Face Dataset}
+After many experiments we observed that autoencoder was able to reconstruct the images well but was not able to generate new images due to reason that we have discussed earlier, where as in case of variational autoencoder, it was not able to reconstruct the images as well as autoencoder but was able to generate new images better than autoencoder. 
+
+\subsection*{Reconstructions and Generations by VAE on partial Animal Face Dataset} Here are the results when we feed separate images of cats. We have resized all images to $128 \times 128$ and trained for 40 epochs. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{catsReconstruct.png}
+    \includegraphics[width=0.2\textwidth]{CatGeneration1.png}
+    \includegraphics[width=0.25\textwidth]{catLoss.png}
+    \caption{Reconstructions and Generations of Cats by Variational Autoencoder}
+    \label{fig:my_label}
+\end{figure} 
+
+Here are the results when we feed separate images of wild animals, this time for 70 epochs.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{wildanimal.png}
+    \includegraphics[width=0.2\textwidth]{wildanimal1.png}
+    \includegraphics[width=0.25\textwidth]{losscurve2.png}
+    \caption{Reconstructions and Generations of Wild Animals by Variational Autoencoder}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection*{Reconstructions and Generations by VAE on full Animal Face Dataset}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{reconstructfull.png}
+    \includegraphics[width=0.23\textwidth]{lossCurve.png}
+    \includegraphics[width=0.23\textwidth]{klLoss.png}
+    \caption{Reconstructions of Animal Faces by Variational Autoencoder}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{generationFull.png}
+    \caption{Generations of Animal Faces by VAE}
+    \label{fig:my_label}
+\end{figure} 
+
+\section{Key Takeaways}
+Here are the main experimental observations: \\
+1. Autoencoders can reconstruct the images pretty well than variational but they cannot generate better images. \\
+2. During our experiments we have seen importance of learning rate, if not choosen properly loss may explode to infinity.\\
+3. We also saw the importance of batch size, as it should be choosen precisely so that GPU memory does not get overloaded.We also saw that in VAE why it is important to minimize both KL Loss and MSE loss together.\\
+4. We also designed deep neural networks with multiple layers and observed that deeper networks are able to learn better representations but they take more time to train.\\
+5. We also saw how important is the KL weight in the loss function, higher the Kl more better is the generation but it may lead to poor reconstructions.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{FID.png}
+    \caption{FID Score between real and generated images}
+    \label{fig:my_label}
+\end{figure}
+
+\section{References}
+\begin{enumerate}
+    \item ELBO Surgery: Yet Another Way to Carve Up the Variational Evidence Lower Bound, \url{https://approximateinference.org/2016/accepted/HoffmanJohnson2016.pdf}
+    \item CS229 Lecture Notes for VAE, \url{https://cs229.stanford.edu/summer2019/cs229-notes8.pdf}
+    \item Tutorial on Variational Autoencoders, \url{https://arxiv.org/pdf/1606.05908.pdf}
+\end{enumerate}
 
 \end{document}
+
+
