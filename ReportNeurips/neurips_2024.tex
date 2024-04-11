@@ -12,6 +12,7 @@
 \usepackage{microtype}      % microtypography
 \usepackage{xcolor}         % colors
 \usepackage[english]{babel}
+\usepackage{graphicx}
 
 % decrease page margins
 \usepackage{geometry}
@@ -77,5 +78,15 @@ Till now we have seen that autoencoders take input and maps it to hidden represe
 To generate meaningful outputs we need to feed the latent variables which is similar to the training data. In other words we want latent variables to be sampled from $P(z|X)$.But autoencoders learn hidden representation $z$ but not a distribution $P(z|X)$. Same is in the case of decoder every time we feed the same latent representation we get the same output, which means both encoder and decoder are deterministic in this case. Now we will look over \textcolor{red}{Variational Autoencoders} which have same structure but they learn the distribution over the latent variables.
 
 \section{Variational Autoencoders}
-We are interested in $P(z|X)$ which corresponds to learning hidden representation. Variational Autoencoders use encoders to learn this distribution by method of variational inference. We will assume that our variational family $Q$ is Gaussian and encoder network will give us the mean and variance of this distribution. Hence $Q = N(\mu(X), \Sigma(X))$ where $\mu(X), \Sigma(X) = Encoder_{\phi}(X)$. Note that $\mu(X), \Sigma(X)$ are functions of input $X$. Once we learned this distribution we can sample from this distribution and feed this sample to the decoder to generate the output.
+We are interested in $P(z|X)$ which corresponds to learning hidden representation. Variational Autoencoders use encoders to learn this distribution by method of variational inference. We will assume that our variational family $Q$ is Gaussian and encoder network will give us the mean and variance of this distribution. Hence $Q = N(\mu(X), \Sigma(X))$ where $\mu(X), \Sigma(X) = Encoder_{\phi}(X)$. Note that $\mu(X), \Sigma(X)$ are functions of input $X$. Once we learned this distribution we can sample from this distribution and feed this sample to the decoder to generate the output. Here is the visual representation of the model:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{vae.png}
+    \caption{Variational Autoencoder}
+    \label{fig:my_label}
+\end{figure}
+
+\section{Experimental Results and Conclusions}
+
 \end{document}
