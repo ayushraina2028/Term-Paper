@@ -1309,6 +1309,9 @@ INPUT EM.aux
 INPUT ./variationalAutoencoders.aux
 INPUT variationalAutoencoders.aux
 INPUT variationalAutoencoders.aux
+INPUT ./results.aux
+INPUT results.aux
+INPUT results.aux
 OUTPUT ppt.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1446,6 +1449,15 @@ INPUT ./variationalAutoencoders.tex
 INPUT variationalAutoencoders.tex
 INPUT ./variationalAutoencoders.tex
 INPUT variationalAutoencoders.tex
+INPUT ./results.tex
+OUTPUT results.aux
+INPUT ./results.tex
+INPUT ./results.tex
+INPUT ./results.tex
+INPUT ./results.tex
+INPUT results.tex
+INPUT ./results.tex
+INPUT results.tex
 OUTPUT ppt.nav
 OUTPUT ppt.toc
 OUTPUT ppt.snm
@@ -1462,6 +1474,9 @@ INPUT EM.aux
 INPUT ./variationalAutoencoders.aux
 INPUT variationalAutoencoders.aux
 INPUT variationalAutoencoders.aux
+INPUT ./results.aux
+INPUT results.aux
+INPUT results.aux
 INPUT ./ppt.out
 INPUT ./ppt.out
 INPUT /home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1200.600pk

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  4 APR 2024 00:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  11 APR 2024 15:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -756,7 +756,7 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count383
 \l__lipsum_a_int=\count384
 \l__lipsum_b_int=\count385
- (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (./Ritsumeikan.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemesmoothbars.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemecircles.sty)) (./ppt.aux (./neuralNet.aux) (./autoencoders.aux) (./EM.aux) (./variationalAutoencoders.aux))
+ (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (./Ritsumeikan.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemesmoothbars.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemecircles.sty)) (./ppt.aux (./neuralNet.aux) (./autoencoders.aux) (./EM.aux) (./variationalAutoencoders.aux) (./results.aux))
 \openout1 = `ppt.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
@@ -963,27 +963,21 @@ Non-PDF special ignored!
 
 ] [7
 
-] [8
-
-] [9
-
 ])
 \openout2 = `variationalAutoencoders.aux'.
 
- (./variationalAutoencoders.tex [10
+ (./variationalAutoencoders.tex [8
 
 
 
 
-] [11
+])
+\openout2 = `results.aux'.
 
-] [12
+ (./results.tex [9
 
-] [13
 
-] [14
 
-] [15
 
 ])
 \tf@nav=\write6
@@ -995,23 +989,23 @@ Non-PDF special ignored!
 \tf@snm=\write8
 \openout8 = `ppt.snm'.
 
- (./ppt.aux (./neuralNet.aux) (./autoencoders.aux) (./EM.aux) (./variationalAutoencoders.aux))
+ (./ppt.aux (./neuralNet.aux) (./autoencoders.aux) (./EM.aux) (./variationalAutoencoders.aux) (./results.aux))
 Package rerunfilecheck Info: File `ppt.out' has not changed.
-(rerunfilecheck)             Checksum: D436C07E81DDAE3149F912CF0FB51825;496.
+(rerunfilecheck)             Checksum: 32D5A700AD97DB92BFB2E499D2E36DD9;642.
  ) 
 Here is how much of TeX's memory you used:
- 26211 strings out of 478287
- 496253 string characters out of 5849289
- 875192 words of memory out of 5000000
- 43819 multiletter control sequences out of 15000+600000
+ 26220 strings out of 478287
+ 496794 string characters out of 5849289
+ 872619 words of memory out of 5000000
+ 43832 multiletter control sequences out of 15000+600000
  474482 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,20n,122p,473b,823s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1200.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0800.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1095.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1440.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0600.600pk>
-Output written on ppt.pdf (15 pages, 77967 bytes).
+Output written on ppt.pdf (9 pages, 60932 bytes).
 PDF statistics:
- 899 PDF objects out of 1000 (max. 8388607)
- 705 compressed objects within 8 object streams
- 35 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 578 PDF objects out of 1000 (max. 8388607)
+ 403 compressed objects within 5 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
