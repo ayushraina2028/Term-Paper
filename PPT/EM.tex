@@ -1,12 +1,15 @@
-\section*{EM Algorithm}
-\begin{frame}{Expectation Maximisation Algorithm}
-
+\section*{Maths}
+\begin{frame}{Variational Inference}
+In VAE, our first goal is to learn the distribution $P(z^{(i)}|x^{(i)})$ we cannot calculate this distribution directly because terms involved are neural networks. So, we use Variational Inference to approximate this distribution.
 \end{frame}
 
-\begin{frame}{Problems with EM Algorithm}
-    
-\end{frame}
+\begin{frame}{Variational Inference}
+    \begin{block}{Log likelihood}
+        \begin{equation}
+            \log P(x^{(i)}) = ELBO(x;Q) + D_{KL}(Q||P_{z|x})
+        \end{equation}
+    \end{block}
+    We want Q to be as close as possible to $P_{z|x}$, which means $D_{KL}(Q||P_{z|x}) \longrightarrow 0$.If we maximise ELBO wrt Q, then we are minimising $D_{KL}(Q||P_{z|x})$.
 
-\begin{frame}{Solution: Variational Inference}
-
+    So our problem reduces to $\max_{q \sim Q} ELBO(x;q)$. We will assume all $q$ belong to same family $Q$ which is Gaussian.
 \end{frame}

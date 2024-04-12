@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  11 APR 2024 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  12 APR 2024 08:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -756,7 +756,7 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count383
 \l__lipsum_a_int=\count384
 \l__lipsum_b_int=\count385
- (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (./Ritsumeikan.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemesmoothbars.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemecircles.sty)) (./ppt.aux (./neuralNet.aux) (./autoencoders.aux) (./EM.aux) (./variationalAutoencoders.aux) (./results.aux))
+ (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (./Ritsumeikan.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemesmoothbars.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemecircles.sty)) (./ppt.aux (./autoencoders.aux) (./variationalAutoencoders.aux) (./results.aux) (./EM.aux))
 \openout1 = `ppt.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
@@ -936,50 +936,268 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 <special> ps:0.8 setlinewidth 0 setgray
 ]
-\openout2 = `neuralNet.aux'.
-
- (./neuralNet.tex [2
-
-
-])
 \openout2 = `autoencoders.aux'.
 
- (./autoencoders.tex [3
+ (./autoencoders.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 11.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 11.
+ (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
+) [2
 
 
-
+] [3
 
 ] [4
 
-])
-\openout2 = `EM.aux'.
+] [5
 
- (./EM.tex [5
+]
+<../ReportNeurips/autoencoder1.png, id=447, 979.9812pt x 354.123pt>
+File: ../ReportNeurips/autoencoder1.png Graphic file (type png)
+<use ../ReportNeurips/autoencoder1.png>
+Package pdftex.def Info: ../ReportNeurips/autoencoder1.png  used on input line 41.
+(pdftex.def)             Requested size: 153.64493pt x 55.52069pt.
+<../ReportNeurips/autoencoder2.png, id=449, 961.9137pt x 354.123pt>
+File: ../ReportNeurips/autoencoder2.png Graphic file (type png)
+<use ../ReportNeurips/autoencoder2.png>
+Package pdftex.def Info: ../ReportNeurips/autoencoder2.png  used on input line 41.
+(pdftex.def)             Requested size: 153.64493pt x 56.56357pt.
+ [6
 
+ <../ReportNeurips/autoencoder1.png> <../ReportNeurips/autoencoder2.png>]
+<../ReportNeurips/animalFaceAE1.png, id=516, 956.1321pt x 354.123pt>
+File: ../ReportNeurips/animalFaceAE1.png Graphic file (type png)
+<use ../ReportNeurips/animalFaceAE1.png>
+Package pdftex.def Info: ../ReportNeurips/animalFaceAE1.png  used on input line 50.
+(pdftex.def)             Requested size: 245.83282pt x 91.04854pt.
+ [7
 
+ <../ReportNeurips/animalFaceAE1.png>] [8
 
+]
+<../ReportNeurips/mnistGenerated2.png, id=647, 982.1493pt x 995.1579pt>
+File: ../ReportNeurips/mnistGenerated2.png Graphic file (type png)
+<use ../ReportNeurips/mnistGenerated2.png>
+Package pdftex.def Info: ../ReportNeurips/mnistGenerated2.png  used on input line 66.
+(pdftex.def)             Requested size: 92.1879pt x 93.40211pt.
+ [9
 
-] [6
+ <../ReportNeurips/mnistGenerated2.png>]
+File: ../ReportNeurips/mnistGenerated2.png Graphic file (type png)
+<use ../ReportNeurips/mnistGenerated2.png>
+Package pdftex.def Info: ../ReportNeurips/mnistGenerated2.png  used on input line 66.
+(pdftex.def)             Requested size: 92.1879pt x 93.40211pt.
+ [10
 
-] [7
+] [11
+
+] [12
 
 ])
 \openout2 = `variationalAutoencoders.aux'.
 
- (./variationalAutoencoders.tex [8
+ (./variationalAutoencoders.tex [13
 
 
 
+
+] [14
+
+] [15
+
+] [16
+
+]
+<vae.png, id=1162, 666.49pt x 780.9175pt>
+File: vae.png Graphic file (type png)
+<use vae.png>
+Package pdftex.def Info: vae.png  used on input line 41.
+(pdftex.def)             Requested size: 122.91406pt x 144.01466pt.
+ [17
+
+ <./vae.png>] [18
+
+] [19
+
+]
+<../ReportNeurips/mnistGenerated1.png, id=1357, 291.9708pt x 292.6935pt>
+File: ../ReportNeurips/mnistGenerated1.png Graphic file (type png)
+<use ../ReportNeurips/mnistGenerated1.png>
+Package pdftex.def Info: ../ReportNeurips/mnistGenerated1.png  used on input line 60.
+(pdftex.def)             Requested size: 122.91406pt x 123.21626pt.
+ [20
+
+ <../ReportNeurips/mnistGenerated1.png>]
+<../ReportNeurips/mnistReconsrtructvae.png, id=1422, 1154.1519pt x 280.4076pt>
+File: ../ReportNeurips/mnistReconsrtructvae.png Graphic file (type png)
+<use ../ReportNeurips/mnistReconsrtructvae.png>
+Package pdftex.def Info: ../ReportNeurips/mnistReconsrtructvae.png  used on input line 70.
+(pdftex.def)             Requested size: 245.83282pt x 59.72595pt.
+ [21
+
+ <../ReportNeurips/mnistReconsrtructvae.png>] [22
 
 ])
 \openout2 = `results.aux'.
 
- (./results.tex [9
+ (./results.tex [23
 
 
 
+
+]
+<../ReportNeurips/catsReconstruct.png, id=1616, 942.4008pt x 454.5783pt>
+File: ../ReportNeurips/catsReconstruct.png Graphic file (type png)
+<use ../ReportNeurips/catsReconstruct.png>
+Package pdftex.def Info: ../ReportNeurips/catsReconstruct.png  used on input line 29.
+(pdftex.def)             Requested size: 245.83282pt x 118.57599pt.
+ [24
+
+ <../ReportNeurips/catsReconstruct.png>]
+<../ReportNeurips/CatGeneration1.png, id=1682, 491.436pt x 492.8814pt>
+File: ../ReportNeurips/CatGeneration1.png Graphic file (type png)
+<use ../ReportNeurips/CatGeneration1.png>
+Package pdftex.def Info: ../ReportNeurips/CatGeneration1.png  used on input line 37.
+(pdftex.def)             Requested size: 169.01036pt x 169.51028pt.
+ [25
+
+ <../ReportNeurips/CatGeneration1.png>]
+<../ReportNeurips/catLoss.png, id=1748, 521.0667pt x 379.4175pt>
+File: ../ReportNeurips/catLoss.png Graphic file (type png)
+<use ../ReportNeurips/catLoss.png>
+Package pdftex.def Info: ../ReportNeurips/catLoss.png  used on input line 45.
+(pdftex.def)             Requested size: 184.3758pt x 134.25125pt.
+ [26
+
+ <../ReportNeurips/catLoss.png>]
+<../ReportNeurips/wildanimal.png, id=1814, 942.4008pt x 454.5783pt>
+File: ../ReportNeurips/wildanimal.png Graphic file (type png)
+<use ../ReportNeurips/wildanimal.png>
+Package pdftex.def Info: ../ReportNeurips/wildanimal.png  used on input line 54.
+(pdftex.def)             Requested size: 307.28987pt x 148.22173pt.
+
+Overfull \vbox (4.94742pt too high) detected at line 54
+ []
+
+[27
+
+ <../ReportNeurips/wildanimal.png>]
+<../ReportNeurips/wildanimal1.png, id=1880, 491.436pt x 492.8814pt>
+File: ../ReportNeurips/wildanimal1.png Graphic file (type png)
+<use ../ReportNeurips/wildanimal1.png>
+Package pdftex.def Info: ../ReportNeurips/wildanimal1.png  used on input line 62.
+(pdftex.def)             Requested size: 169.01036pt x 169.51028pt.
+ [28
+
+ <../ReportNeurips/wildanimal1.png>]
+<../ReportNeurips/losscurve2.png, id=1945, 499.3857pt x 390.258pt>
+File: ../ReportNeurips/losscurve2.png Graphic file (type png)
+<use ../ReportNeurips/losscurve2.png>
+Package pdftex.def Info: ../ReportNeurips/losscurve2.png  used on input line 70.
+(pdftex.def)             Requested size: 184.3758pt x 144.08354pt.
+ [29
+
+ <../ReportNeurips/losscurve2.png>]
+<../ReportNeurips/reconstructfull.png, id=2011, 936.6192pt x 251.4996pt>
+File: ../ReportNeurips/reconstructfull.png Graphic file (type png)
+<use ../ReportNeurips/reconstructfull.png>
+Package pdftex.def Info: ../ReportNeurips/reconstructfull.png  used on input line 79.
+(pdftex.def)             Requested size: 307.28987pt x 82.51158pt.
+ [30
+
+ <../ReportNeurips/reconstructfull.png>]
+<../ReportNeurips/generationFull.png, id=2077, 491.436pt x 492.8814pt>
+File: ../ReportNeurips/generationFull.png Graphic file (type png)
+<use ../ReportNeurips/generationFull.png>
+Package pdftex.def Info: ../ReportNeurips/generationFull.png  used on input line 87.
+(pdftex.def)             Requested size: 169.01036pt x 169.51028pt.
+ [31
+
+ <../ReportNeurips/generationFull.png>]
+<../ReportNeurips/losscurve.png, id=2143, 521.7894pt x 379.4175pt>
+File: ../ReportNeurips/losscurve.png Graphic file (type png)
+<use ../ReportNeurips/losscurve.png>
+Package pdftex.def Info: ../ReportNeurips/losscurve.png  used on input line 96.
+(pdftex.def)             Requested size: 184.3758pt x 134.066pt.
+ [32
+
+ <../ReportNeurips/lossCurve.png>]
+<../ReportNeurips/klLoss.png, id=2209, 508.7808pt x 379.4175pt>
+File: ../ReportNeurips/klLoss.png Graphic file (type png)
+<use ../ReportNeurips/klLoss.png>
+Package pdftex.def Info: ../ReportNeurips/klLoss.png  used on input line 105.
+(pdftex.def)             Requested size: 184.3758pt x 137.49913pt.
+ [33
+
+ <../ReportNeurips/klLoss.png>]
+<../ReportNeurips/FID.png, id=2274, 757.83125pt x 158.5925pt>
+File: ../ReportNeurips/FID.png Graphic file (type png)
+<use ../ReportNeurips/FID.png>
+Package pdftex.def Info: ../ReportNeurips/FID.png  used on input line 114.
+(pdftex.def)             Requested size: 184.3758pt x 38.58325pt.
+ [34
+
+ <../ReportNeurips/FID.png>] [35
+
+] [36
+
+] [37
+
+] [38
+
+] [39
+
+]
+<../lion.png, id=2663, 1126.6893pt x 312.9291pt>
+File: ../lion.png Graphic file (type png)
+<use ../lion.png>
+Package pdftex.def Info: ../lion.png  used on input line 137.
+(pdftex.def)             Requested size: 245.83282pt x 68.27638pt.
+ [40
+
+ <../lion.png>]
+<../dogs1.png, id=2729, 602.7318pt x 591.1686pt>
+File: ../dogs1.png Graphic file (type png)
+<use ../dogs1.png>
+Package pdftex.def Info: ../dogs1.png  used on input line 145.
+(pdftex.def)             Requested size: 184.3758pt x 180.83385pt.
+
+Overfull \vbox (8.2309pt too high) detected at line 145
+ []
+
+[41
+
+ <../dogs1.png>])
+\openout2 = `EM.aux'.
+
+ (./EM.tex [42
+
+
+
+
+] [43
 
 ])
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 64.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) [44
+
+
+
+]
 \tf@nav=\write6
 \openout6 = `ppt.nav'.
 
@@ -989,23 +1207,23 @@ Non-PDF special ignored!
 \tf@snm=\write8
 \openout8 = `ppt.snm'.
 
- (./ppt.aux (./neuralNet.aux) (./autoencoders.aux) (./EM.aux) (./variationalAutoencoders.aux) (./results.aux))
+ (./ppt.aux (./autoencoders.aux) (./variationalAutoencoders.aux) (./results.aux) (./EM.aux))
 Package rerunfilecheck Info: File `ppt.out' has not changed.
-(rerunfilecheck)             Checksum: 32D5A700AD97DB92BFB2E499D2E36DD9;642.
+(rerunfilecheck)             Checksum: CDE82D4F8F63AEFAE28A61D8FC1D0ADD;443.
  ) 
 Here is how much of TeX's memory you used:
- 26220 strings out of 478287
- 496794 string characters out of 5849289
- 872619 words of memory out of 5000000
- 43832 multiletter control sequences out of 15000+600000
- 474482 words of font info for 36 fonts, out of 8000000 for 9000
+ 26672 strings out of 478287
+ 507009 string characters out of 5849289
+ 901147 words of memory out of 5000000
+ 44164 multiletter control sequences out of 15000+600000
+ 482959 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,20n,122p,473b,823s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1200.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0800.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1095.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1440.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0600.600pk>
-Output written on ppt.pdf (9 pages, 60932 bytes).
+ 128i,20n,122p,473b,829s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss2488.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1095.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1000.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1200.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0800.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1095.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1440.600pk> </home/ayushraina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0600.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on ppt.pdf (44 pages, 11252779 bytes).
 PDF statistics:
- 578 PDF objects out of 1000 (max. 8388607)
- 403 compressed objects within 5 object streams
- 24 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3379 PDF objects out of 3580 (max. 8388607)
+ 2901 compressed objects within 30 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
